@@ -28,7 +28,7 @@ function displayHistoricalEvents() {
         container.appendChild(eventElement);
     });
 }
-// Asosiy funksiyalar
+/*// Asosiy funksiyalar
 async function getHistoricalEvents() {
     try {
         const response = await fetch('https://history.muffinlabs.com/date');
@@ -39,6 +39,13 @@ async function getHistoricalEvents() {
         // Agar API ishlamasa, standart ma'lumotlarni qaytarish
         return historicalEvents;
     }
+}*/
+async function getUzbekHistory() {
+    const response = await fetch(
+        'https://uz.wikipedia.org/w/api.php?action=query&list=search&srsearch=Oʻzbekiston tarixi&format=json&origin=*'
+    );
+    const data = await response.json();
+    return data.query.search.map(item => item.title);
 }
 
 function processApiData(apiData) {
@@ -85,6 +92,5 @@ async function displayHistoricalEvents() {
 // Sahifa yuklanganda funktsiyalarni chaqirish
 window.onload = function() {
     displayCurrentDate();
-    displayHistoricalEvents();
     displayHistoricalEvents();
 };
