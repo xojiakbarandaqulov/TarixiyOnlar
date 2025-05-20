@@ -93,4 +93,5 @@ async function displayHistoricalEvents() {
 window.onload = function() {
     displayCurrentDate();
     displayHistoricalEvents();
+    displayHistoricalEvents();
 };
