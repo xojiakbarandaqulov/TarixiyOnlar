@@ -32,12 +32,13 @@ function displayHistoricalEvents() {
 async function getHistoricalEvents() {
     try {
         const response = await fetch('https://history.muffinlabs.com/date');
+        console.log(response.status); // 200 bo'lishi kerak
         const data = await response.json();
-        return processApiData(data);
+        console.log(data); // Ma'lumotlarni ko'rish
+        return data;
     } catch (error) {
-        console.error('Xatolik yuz berdi:', error);
-        // Agar API ishlamasa, standart ma'lumotlarni qaytarish
-        return historicalEvents;
+        console.error('API xatosi:', error);
+        return []; // Bo'sh massiv qaytarish
     }
 }
 /*async function getUzbekHistory() {
