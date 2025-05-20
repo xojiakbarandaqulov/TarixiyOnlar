@@ -3,23 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarixiy Kunlar</title>
+    <title>Tarixiy Voqealar Arxivi</title>
+    <link rel="stylesheet" href="css/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header>
-    <h1>Bugungi Tarixda Sodir Bo'lgan Voqealar</h1>
-    <div id="current-date"></div>
+<header class="main-header">
+    <div class="container">
+        <h1><i class="fas fa-landmark"></i> Tarixiy Voqealar Arxivi</h1>
+        <p>O'zbekiston va dunyo tarixidagi muhim voqealar</p>
+    </div>
 </header>
 
-<main>
-    <div id="events-container">
-        <!-- Tarixiy voqealar shu yerda ko'rinadi -->
+<main class="container">
+    <div id="events-container" class="events-grid">
+        <!-- Voqealar JavaScript orqali yuklanadi -->
     </div>
 </main>
 
-<footer>
-    <p>© 2023 Tarixiy Voqealar Arxiv</p>
+<footer class="main-footer">
+    <div class="container">
+        <p>&copy; Tarixiy Voqealar Arxivi | Barcha huquqlar himoyalangan</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
 </footer>
 
 <script src="js/script.js"></script>
